@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/style.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('jumbotron') %>
+
+    <div class="container">
+      <ul style="list-style:none; display:flex; flex-wrap:wrap">
+        <% data.forEach(item=>{%><span style="flex-direction:row; padding:10px;"
+          ><img src="<%=item.picture.large%>" alt="profile" />
+          <li><%= item.name.first %> <%= item.name.last %></li> </span
+        ><%}) %>
+      </ul>
+    </div>
+    <footer>&copy;JDRichardsTech 2020</footer>
+  </body>
+</html>

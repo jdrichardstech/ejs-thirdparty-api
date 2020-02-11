@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/style.css" type="text/css" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+  <div id="movieHeader"><h1>2019 Popular Movies</h1></div>
+    <div class="container movieBackground">
+      <ul style="list-style:none; display:flex; flex-wrap:wrap">
+        <% data.forEach(movie=>{%><span class="movie"
+          style="flex-direction:row; padding:10px;"
+        >
+        <li style="padding:20px; line-height:1.5em;" >
+         <h2><%= movie.title %></h2>
+          <img style="border-radius:0; margin-bottom:20px;"
+            src="http://image.tmdb.org/t/p/w185//<%=movie.poster_path%>"
+            alt="poster"
+          />
+          
+         
+            <h4>Synopsis:</h4> <%= movie.overview %>
+          </li></span
+        >
+        %><%}) %>
+      </ul>
+    </div>
+    <footer>&copy;JDRichardsTech 2020</footer>
+  </body>
+</html>
